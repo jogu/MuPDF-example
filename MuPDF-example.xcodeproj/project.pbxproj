@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79F71367E635A51BA0C3EBAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26E0C514DC25EEB335E151C /* libPods.a */; };
 		7C9CDD191B49C16A00EEAFBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDD181B49C16A00EEAFBE /* main.m */; };
 		7C9CDD1C1B49C16A00EEAFBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDD1B1B49C16A00EEAFBE /* AppDelegate.m */; };
 		7C9CDD1F1B49C16A00EEAFBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDD1E1B49C16A00EEAFBE /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		185F34CA4FCD0FB539D47AEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7C9CDD131B49C16A00EEAFBE /* MuPDF-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MuPDF-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9CDD171B49C16A00EEAFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9CDD181B49C16A00EEAFBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		7C9CDD2C1B49C16A00EEAFBE /* MuPDF-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MuPDF-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9CDD311B49C16A00EEAFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9CDD321B49C16A00EEAFBE /* MuPDF_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDF_exampleTests.m; sourceTree = "<group>"; };
+		C26E0C514DC25EEB335E151C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6BE4389752632C0350FBCA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F71367E635A51BA0C3EBAC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D43F61E9ED75BD95DED03DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				185F34CA4FCD0FB539D47AEF /* Pods.debug.xcconfig */,
+				F6BE4389752632C0350FBCA4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7C9CDD0A1B49C16A00EEAFBE = {
 			isa = PBXGroup;
 			children = (
 				7C9CDD151B49C16A00EEAFBE /* MuPDF-example */,
 				7C9CDD2F1B49C16A00EEAFBE /* MuPDF-exampleTests */,
 				7C9CDD141B49C16A00EEAFBE /* Products */,
+				1D43F61E9ED75BD95DED03DE /* Pods */,
+				B8555112963E025B3B232E4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +135,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B8555112963E025B3B232E4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C26E0C514DC25EEB335E151C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C9CDD361B49C16A00EEAFBE /* Build configuration list for PBXNativeTarget "MuPDF-example" */;
 			buildPhases = (
+				11ED7DB1D585C44CBBE5F90F /* Check Pods Manifest.lock */,
 				7C9CDD0F1B49C16A00EEAFBE /* Sources */,
 				7C9CDD101B49C16A00EEAFBE /* Frameworks */,
 				7C9CDD111B49C16A00EEAFBE /* Resources */,
+				359ED7054CA2E0000E1D882F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11ED7DB1D585C44CBBE5F90F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		359ED7054CA2E0000E1D882F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C9CDD0F1B49C16A00EEAFBE /* Sources */ = {
@@ -347,6 +406,7 @@
 		};
 		7C9CDD371B49C16A00EEAFBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 185F34CA4FCD0FB539D47AEF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MuPDF-example/Info.plist";
@@ -357,6 +417,7 @@
 		};
 		7C9CDD381B49C16A00EEAFBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6BE4389752632C0350FBCA4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MuPDF-example/Info.plist";
@@ -418,6 +479,7 @@
 				7C9CDD381B49C16A00EEAFBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C9CDD391B49C16A00EEAFBE /* Build configuration list for PBXNativeTarget "MuPDF-exampleTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				7C9CDD3B1B49C16A00EEAFBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
