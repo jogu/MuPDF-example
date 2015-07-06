@@ -15,6 +15,7 @@
 		7C9CDD241B49C16A00EEAFBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CDD231B49C16A00EEAFBE /* Images.xcassets */; };
 		7C9CDD271B49C16A00EEAFBE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CDD251B49C16A00EEAFBE /* LaunchScreen.xib */; };
 		7C9CDD331B49C16A00EEAFBE /* MuPDF_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDD321B49C16A00EEAFBE /* MuPDF_exampleTests.m */; };
+		7C9CDD3D1B49C36700EEAFBE /* hello-world.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C9CDD3C1B49C36700EEAFBE /* hello-world.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		7C9CDD2C1B49C16A00EEAFBE /* MuPDF-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MuPDF-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9CDD311B49C16A00EEAFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9CDD321B49C16A00EEAFBE /* MuPDF_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDF_exampleTests.m; sourceTree = "<group>"; };
+		7C9CDD3C1B49C36700EEAFBE /* hello-world.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "hello-world.pdf"; sourceTree = "<group>"; };
 		C26E0C514DC25EEB335E151C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BE4389752632C0350FBCA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				7C9CDD1B1B49C16A00EEAFBE /* AppDelegate.m */,
 				7C9CDD1D1B49C16A00EEAFBE /* ViewController.h */,
 				7C9CDD1E1B49C16A00EEAFBE /* ViewController.m */,
+				7C9CDD3C1B49C36700EEAFBE /* hello-world.pdf */,
 				7C9CDD201B49C16A00EEAFBE /* Main.storyboard */,
 				7C9CDD231B49C16A00EEAFBE /* Images.xcassets */,
 				7C9CDD251B49C16A00EEAFBE /* LaunchScreen.xib */,
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9CDD3D1B49C36700EEAFBE /* hello-world.pdf in Resources */,
 				7C9CDD221B49C16A00EEAFBE /* Main.storyboard in Resources */,
 				7C9CDD271B49C16A00EEAFBE /* LaunchScreen.xib in Resources */,
 				7C9CDD241B49C16A00EEAFBE /* Images.xcassets in Resources */,

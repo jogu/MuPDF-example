@@ -8,15 +8,47 @@
 
 #import "AppDelegate.h"
 
+#import "MuPDF/MuDocRef.h"
+#import "MuPDF/MuDocumentController.h"
+#include "mupdf/fitz.h"
+#include "MuPDF/common.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+enum
+{
+    ResourceCacheMaxSize = 128<<20	/**< use at most 128M for resource cache */
+};
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    queue = dispatch_queue_create("com.artifex.mupdf.queue", NULL);
+
+    screenScale = [[UIScreen mainScreen] scale];
+
+    ctx = fz_new_context(NULL, NULL, ResourceCacheMaxSize);
+    fz_register_document_handlers(ctx);
+
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"hello-world" ofType:@"pdf"];
+    MuDocRef *doc;
+
+    doc = [[MuDocRef alloc] initWithFilename:(char *)file.UTF8String];
+    if (!doc) {
+        NSLog(@"Cannot open document '%@'", file);
+        return YES;
+    }
+
+    MuDocumentController *document = [[MuDocumentController alloc] initWithFilename:file path:(char *)file.UTF8String document: doc];
+
+    UINavigationController *navigator = [[UINavigationController alloc] initWithRootViewController: document];
+    [[navigator navigationBar] setTranslucent: YES];
+    [[navigator toolbar] setTranslucent: YES];
+
+    self.window.rootViewController = navigator;
+
     return YES;
 }
 
