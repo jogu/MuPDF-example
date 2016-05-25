@@ -8,10 +8,10 @@
 
 #import "AppDelegate.h"
 
-#import "MuDocRef.h"
-#import "MuDocumentController.h"
+#import "mupdf/MuDocRef.h"
+#import "mupdf/MuDocumentController.h"
 #include "mupdf/fitz.h"
-#include "common.h"
+#include "mupdf/common.h"
 
 @interface AppDelegate ()
 
