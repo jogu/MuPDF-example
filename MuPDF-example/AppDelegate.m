@@ -35,13 +35,13 @@ enum
     NSString *file = [[NSBundle mainBundle] pathForResource:@"hello-world" ofType:@"pdf"];
     MuDocRef *doc;
 
-    doc = [[MuDocRef alloc] initWithFilename:(char *)file.UTF8String];
+    doc = [[MuDocRef alloc] initWithFilename:file];
     if (!doc) {
         NSLog(@"Cannot open document '%@'", file);
         return YES;
     }
 
-    MuDocumentController *document = [[MuDocumentController alloc] initWithFilename:file path:(char *)file.UTF8String document: doc];
+    MuDocumentController *document = [[MuDocumentController alloc] initWithFilename:file path:file document: doc];
 
     UINavigationController *navigator = [[UINavigationController alloc] initWithRootViewController: document];
     [[navigator navigationBar] setTranslucent: YES];
